@@ -1,0 +1,19 @@
+<h2>Dummy Keep</h2>
+
+<section class="wrapper">
+  <section>
+    <header>
+      <h4>Tareas</h4>
+      <button (click)="add()">Agregar</button>
+    </header>
+    <main>
+      <app-task
+        *ngFor="let task of tasks.data"
+        [title]="task.title"
+        [id]="task._id"
+        [date]="task.date"
+        [description]="task.description"
+      ></app-task>
+    </main>
+  </section>
+</section>

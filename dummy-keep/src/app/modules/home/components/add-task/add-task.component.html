@@ -1,0 +1,23 @@
+<header>
+  <p class="title">Agregar Tarea</p>
+</header>
+<form [formGroup]="formGroup">
+  <section class="fields">
+    <input type="date" [required]="true" formControlName="date" />
+    <input
+      type="text"
+      placeholder="Titulo"
+      [required]="true"
+      formControlName="title"
+    />
+    <input
+      type="text"
+      placeholder="Descripcion"
+      [required]="true"
+      formControlName="description"
+    />
+    <button (click)="id ? updateTask(id) : createTask()">
+      {{ id ? "Actualizar" : "Agregar" }}
+    </button>
+  </section>
+</form>
